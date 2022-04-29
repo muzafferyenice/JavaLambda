@@ -152,4 +152,5 @@ public class Lamda02 {
                 min((x, y) -> x - y).get();
     }
 
+
 }
