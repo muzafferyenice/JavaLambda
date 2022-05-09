@@ -132,7 +132,7 @@ public class Lambda01 {
     public static void printCiftKucuk(List<Integer> sayi) {
         sayi.
                 stream().
-                //ilter(t->t%2==0 && t<34)
+                //filter(t->t%2==0 && t<34)
                         filter(Lambda01::ciftBul).
                 filter(t -> t < 34).
                 forEach(Lambda01::yazdir);
