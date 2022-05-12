@@ -99,6 +99,8 @@ public class C6_Lambdada_ForLoop_Aralik_Kontrolu {
     //S11: 21 den baslayan 7 nin katlarinin ilk 20 teriminin toplayalim
     public static void tekYaz21DenBuyukOlanTopla() {
         System.out.println(IntStream.iterate(21, t -> t + 7).limit(20).sum());
+        IntStream.rangeClosed(7,300).sum();
+
     }
 }
 //iterate bize sayilari istedigimiz sekilde yineletmeyi saglar yani buradaki ornekte 7ser7ser artmayi saglar
