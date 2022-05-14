@@ -29,7 +29,7 @@ public class Main {
         albums.get(1).addToPlayList("Rap god",playList_1);
         albums.get(1).addToPlayList("Lose yourself",playList_1);
 
-        play(playList_1);
+        play(playList_1);// kod calismaya burdan basliyor
 
     }
     private static void play(LinkedList<Song> playList){
@@ -47,7 +47,7 @@ public class Main {
 
     while(!quit){
         int action = sc.nextInt();
-        sc.nextLine();
+        //sc.nextLine();
 
         switch (action){
 
@@ -57,17 +57,19 @@ public class Main {
                 break;
 
             case 1:
-                if(!forward){
+               /* if(!forward){
                     if(listIterator.hasNext()){
                         listIterator.next();
                     }
                     forward = true;
-                }
+                }*/
+
                 if(listIterator.hasNext()){
                     System.out.println("Now playing "+listIterator.next().toString());
                 }else {
-                    System.out.println("no song availble, reached to the end of the list");
+                    System.out.println("no song available, reached to the end of the list");
                     forward = false;
+
                 }
                 break;
             case 2:
@@ -120,6 +122,9 @@ public class Main {
                             System.out.println("now playing "+listIterator.previous().toString());
                     }
                 }
+                if (playList.size() ==0){
+                    System.out.println("tinne");
+                }
 
         }
     }
@@ -134,6 +139,7 @@ public class Main {
                 "4 - list of all songs \n"+
                 "5 - print all available options\n"+
                 "6 - delete current song");
+
     }
 
     private static void printList(LinkedList<Song> playList){

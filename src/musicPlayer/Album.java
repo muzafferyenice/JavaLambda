@@ -2,6 +2,7 @@ package musicPlayer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class Album {
     private String name;
@@ -17,18 +18,18 @@ public class Album {
     }
     public Song findSong(String title){
         for (Song checkedSong : songs){
-            if(checkedSong.getTitle().equals(title))return checkedSong;
+           if(checkedSong.getTitle().equals(title)) return checkedSong;
         }
         return null;
     }
     public boolean addSong(String title, double duration){
         if (findSong(title)==null){
             songs.add(new Song(title,duration));
-            System.out.println(title+"successfully added to the list");
+         //   System.out.println(title+" successfully added to the list");
             return true;
         }
         else{
-            System.out.println("Song with name "+ title+" already exist in the list");
+          //  System.out.println("Song with name "+ title+" already exist in the list");
             return false;
         }
     }
@@ -38,7 +39,7 @@ public class Album {
             PlayList.add(this.songs.get(index));
             return true;
         }
-        System.out.println("this album does not have song with trackNumber "+trackNumber);
+      //  System.out.println("this album does not have song with trackNumber "+trackNumber);
         return false;
     }
     public boolean addToPlayList(String title, LinkedList<Song> PlayList) {
@@ -49,7 +50,9 @@ public class Album {
             }
 
         }
-        System.out.println(title + "there is no such song in album");
+        System.out.println(PlayList.stream().collect(Collectors.toList()));
+        System.out.println(new ArrayList<>(PlayList));
+        // System.out.println(title + "there is no such song in album");
         return false;
     }
 }

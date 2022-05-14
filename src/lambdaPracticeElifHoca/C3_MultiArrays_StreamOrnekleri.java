@@ -57,7 +57,8 @@ public class C3_MultiArrays_StreamOrnekleri {
     // S1 : tum elemanlari list yapayim
     public static void tumElemanListYap(String[][] arr) {
         for (String[] w : arr) {
-            System.out.println(Arrays.stream(w).collect(Collectors.toList()));
+            System.out.println(Arrays.stream(w).
+                    collect(Collectors.toList()));
         }
         System.out.println(
                 Arrays.stream(arr).

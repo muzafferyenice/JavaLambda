@@ -1,6 +1,6 @@
 package lambdaPracticeElifHoca;
 
-import java.util.stream.IntStream;
+
 
 public class Methods {
 
